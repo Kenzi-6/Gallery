@@ -31,7 +31,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @NonNull
     @Override
     public RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // расширение макета в этом методе, который мы создали
+        // расширение макета
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_layout, parent, false);
         return new RecyclerViewHolder(view);
     }

@@ -68,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
         // инициализация адаптера
         imageRVAdapter = new RecyclerViewAdapter(MainActivity.this, imagePaths);
         GridLayoutManager manager = new GridLayoutManager(MainActivity.this, 4);
-
         // устанавливаем менеджер и адаптер для recyclerview
         imagesRV.setLayoutManager(manager);
         imagesRV.setAdapter(imageRVAdapter);

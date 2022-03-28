@@ -54,7 +54,6 @@ public class ImageDetailActivity extends AppCompatActivity {
     private class ScaleListener extends ScaleGestureDetector.SimpleOnScaleGestureListener {
         @Override
         public boolean onScale(ScaleGestureDetector scaleGestureDetector) {
-
             // устанавливаем масштаб изображения
             mScaleFactor *= scaleGestureDetector.getScaleFactor();
             mScaleFactor = Math.max(0.1f, Math.min(mScaleFactor, 10.0f));
