@@ -19,7 +19,6 @@ public class ImageDetailActivity extends AppCompatActivity {
     private ImageView imageView;
     private ScaleGestureDetector scaleGestureDetector;
 
-    // в строке ниже мы определяем ScaleFactor.
     private float mScaleFactor = 1.0f;
 
     @Override
@@ -27,16 +26,16 @@ public class ImageDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_detail);
 
-        // в строке ниже получаем данные, которые мы передали из нашего класса адаптера
+        // получаем данные, которые передали из класса адаптера
         imgPath = getIntent().getStringExtra("imgPath");
 
         // инициализация изображения.
         imageView = findViewById(R.id.idIVImage);
 
-        // в строке ниже мы инициализируем scalegesturedetector для увеличения и уменьшения масштаба нашего изображения.
+        // инициализируем scalegesturedetector для увеличения и уменьшения масштаба нашего изображения.
         scaleGestureDetector = new ScaleGestureDetector(this, new ScaleListener());
 
-        // в строке ниже мы получаем файл изображения по его пути.
+        // получаем файл изображения по его пути
         File imgFile = new File(imgPath);
 
         // если файл существует, то мы загружаем это изображение в imageView
@@ -60,7 +59,7 @@ public class ImageDetailActivity extends AppCompatActivity {
             mScaleFactor *= scaleGestureDetector.getScaleFactor();
             mScaleFactor = Math.max(0.1f, Math.min(mScaleFactor, 10.0f));
 
-        // устанавливаем scalex и scaley для отображения изобрражения.
+        // устанавливаем scalex и scaley для отображения изобрражения
             imageView.setScaleX(mScaleFactor);
             imageView.setScaleY(mScaleFactor);
             return true;
